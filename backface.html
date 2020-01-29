@@ -1,0 +1,41 @@
+<style>
+#MainWrap{
+	width: 250px;
+	height: 250px;
+	perspective: 200px;
+	
+}
+#front, #back{
+  	width:250px;
+	height:250px;
+   position:absolute;
+	backface-visibility: hidden;
+}
+#back{
+    background:rgba(1, 1, 1, 0.6);
+	transform:rotateY(180deg);
+	
+}
+#image{
+	width: 250px;
+	height: 250px;
+	position:absolute;
+	transform-style: preserve-3d;
+	transition:all 2s linear;
+	
+}
+#MainWrap:hover #image{
+  transform:rotateY(180deg);
+}
+  
+</style>
+<body>
+<div id="MainWrap">
+		<div id="image">
+<div id="front">
+  <img src="1.jpg" width="250px" height="250px"/></div>
+    <div id="back">
+  <p>Tanya garg</p>
+    </div>
+        </div>
+</div>
